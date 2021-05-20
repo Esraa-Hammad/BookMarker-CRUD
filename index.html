@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Bookmark</title>
+       </head>
+       <body>  
+            <div class="home ">
+                <div>
+         <div class="shadow p-3 mb-5 bg-black rounded  bo-x">
+             <h1 class="text-center" style="color: #AEA8D3"><i class="far fa-bookmark mr-2"></i>Bookmark  </h1>
+             <div class="form-group">
+                 <label class="text-center">Site Name</label>
+                 <input class="form-control" id="name" type="text">
+                 <div class="alert alert-danger d-none mt-2" id="namealert">
+                    Invaild Name
+                  </div>
+             </div>
+             <div class="form-group">
+                <label class="text-center">Site URL</label>
+                <input class="form-control" id="url" type="text">
+                <div class="alert alert-danger d-none mt-2" id="alertname">
+                    Invaild URL
+                  </div>
+            </div>
+            <button   id="addbtn" class="btn btn-danger"><i class="fas fa-book mr-2" style="color: #FFDD00;"></i>ADD</button>
+         </div>
+        </div>
+        </div> 
+        <div class="section">
+        <div class="container">
+         <div class="row" id="item">
+             <div >
+                 <div >
+                     <h4 id="memberName" ></h4>
+                     
+
+                 </div>
+
+             </div>
+
+         </div>
+        </div>
+    </div>
+        <script src="js/main.js"></script>
+       </body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    background-color: #353535;
+}
+.home{
+    background-color: #EEEEEE;
+    background-size: 100% 100%;
+    padding: 40px 20px;
+}
+.bo-x{
+    width: 70%;
+    margin: auto;
+}
+.section{
+    background-color: #353535;
+    height: 500px;
+   
+}
+#addbtn{
+    background-color: #FF5F5F;
+   margin: auto;
+}
+.member{
+    border: 2px solid #D24D57;
+   width: 75%;
+   padding: 20px  20px;
+   margin-top: 30px;
+   
+}
+.butt-on{
+   display: flex;
+   justify-content: space-evenly;
+   
+}
