@@ -109,7 +109,7 @@ function display(){
         <h4 class="text-center mb-2" style="color: #FFFFDC;" >${books[i].name}</h4>
         <div  class="butt-on">
         <button class="btn btn-outline-info button1">visit</button>
-        <button class="btn btn-outline-warning" onclick="edit(${i})">Edit</button>
+        <button class="btn btn-outline-warning button2" onclick="edit(${i})">Edit</button>
         <button class="btn btn-outline-danger" onclick="bookdelete(${i})">Delete</button>
         </div>
         </div>
