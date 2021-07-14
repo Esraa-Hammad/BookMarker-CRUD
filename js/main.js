@@ -21,12 +21,14 @@ nameinput.onkeyup=function(){
         addbtn.disabled="true";
         nameinput.classList.add("is-invalid");
         nameinput.classList.remove("is-valid");
-       
+      
     }
     else{
         addbtn.removeAttribute("disabled")
         nameinput.classList.add("is-valid");
         nameinput.classList.remove("is-invalid");
+        namealert.classList.add("d-none")
+      
         
     }
 }
@@ -38,7 +40,7 @@ nameinput.onblur=function(){
     }
     else{
         
-        namealert.classList.add("d-none")
+       namealert.classList.add("d-none")
     }
 }
 urlinput.onkeyup=function(){
@@ -58,6 +60,7 @@ urlinput.onkeyup=function(){
         addbtn.removeAttribute("disabled")
         urlinput.classList.add("is-valid");
         urlinput.classList.remove("is-invalid");
+        alertname.classList.add("d-none")
         
     }
 }
@@ -82,6 +85,10 @@ addbtn.onclick=function(){
     
     if(addbtn.innerHTML=="EDIT"){
         newval();   
+       
+    }
+    else if( nameinput.value.length==0 && urlinput.value.length==0){
+        addbtn.disabled="true";
     }
     else{ADD();}
     display();
@@ -119,25 +126,36 @@ function display(){
     document.getElementById("item").innerHTML=counter;
 }
 function edit(val){
+   
     addbtn.innerHTML="EDIT";
     index=val;
     nameinput.value=books[val].name;
     urlinput.value=books[val].url;
-}
+   
+  }
 function newval(){
-    nameinput.classList.remove("is-valid");
+    if( ( nameinput.value.length==0 && urlinput.value.length==0)){
+      
+        addbtn.disabled="true";
+        
+    }
+   else{ nameinput.classList.remove("is-valid");
     urlinput.classList.remove("is-valid");
+    
     var book={
         name:nameinput.value,
         url:urlinput.value,
     }
     books[index]=book;
-    addbtn.innerHTML=="ADD"
-    localStorage.setItem("Books",JSON.stringify(books));
     
+    localStorage.setItem("Books",JSON.stringify(books));
+    Restform()
+   
+}
 }
 function bookdelete(val){
     alert("are you sure to delete this")
     books.splice(val,1);
+    localStorage.setItem("Books",JSON.stringify(books));
     display();
 }
